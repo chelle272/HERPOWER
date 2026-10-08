@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Take the Quiz | HERPOWER</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER / NAVIGATION
+    ========================== -->
+    <header class="header">
+
+        <nav class="navbar">
+
+            <!-- LOGO -->
+            <a href="../index.html" class="logo">
+                HER<span>POWER</span>
+            </a>
+
+
+            <!-- MOBILE MENU BUTTON -->
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu">
+
+                ☰
+
+            </button>
+
+
+            <!-- NAVIGATION LINKS -->
+            <ul class="nav-links" id="navLinks">
+
+                <li>
+                    <a href="../index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="statistics.html">
+                        Statistics
+                    </a>
+                </li>
+
+                <li>
+                    <a href="laws.html">
+                        Laws & Rights
+                    </a>
+                </li>
+
+                <li>
+                    <a href="inspiring-women.html">
+                        Inspiring Women
+                    </a>
+                </li>
+
+                <li>
+                    <a href="empowerment.html">
+                        Take Action
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="quiz.html"
+                        class="nav-button active">
+                        Take the Quiz
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         QUIZ HERO
+    ========================== -->
+    <section class="quiz-hero">
+
+        <div class="container">
+
+            <span class="eyebrow">
+                TEST YOUR KNOWLEDGE
+            </span>
+
+            <h1>
+                How much do you know<br>
+                about women empowerment?
+            </h1>
+
+            <p>
+                Answer the questions below and see how much
+                you have learned about equality, women's rights,
+                and empowerment.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         QUIZ
+    ========================== -->
+    <section class="quiz-section">
+
+        <div class="container">
+
+            <div
+                class="quiz-wrapper"
+                id="quizWrapper">
+
+                <!-- QUIZ TOP -->
+                <div class="quiz-top">
+
+                    <span id="questionNumber">
+                        Question 1 of 8
+                    </span>
+
+                    <span id="scoreDisplay">
+                        Score: 0
+                    </span>
+
+                </div>
+
+
+                <!-- PROGRESS BAR -->
+                <div class="quiz-progress">
+
+                    <div
+                        class="quiz-progress-bar"
+                        id="quizProgressBar">
+                    </div>
+
+                </div>
+
+
+                <!-- QUESTION -->
+                <div class="quiz-question">
+
+                    <span class="question-label">
+                        QUESTION
+                    </span>
+
+                    <h2 id="questionText">
+                        Loading question...
+                    </h2>
+
+                </div>
+
+
+                <!-- OPTIONS -->
+                <div
+                    class="quiz-options"
+                    id="quizOptions">
+                </div>
+
+
+                <!-- FEEDBACK -->
+                <div
+                    class="quiz-feedback"
+                    id="quizFeedback">
+                </div>
+
+
+                <!-- NEXT BUTTON -->
+                <div class="quiz-navigation">
+
+                    <button
+                        class="btn btn-primary"
+                        id="nextButton"
+                        disabled>
+
+                        Next Question →
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 QUIZ RESULT
+            ========================== -->
+            <div
+                class="quiz-result"
+                id="quizResult">
+
+                <span class="eyebrow">
+                    QUIZ COMPLETE
+                </span>
+
+
+                <div class="result-icon">
+                    ★
+                </div>
+
+
+                <h2>
+                    Your Result
+                </h2>
+
+
+                <p class="result-score">
+
+                    <span id="finalScore">
+                        0
+                    </span>
+
+                    / 8
+
+                </p>
+
+
+                <p id="resultMessage">
+                    Great job!
+                </p>
+
+
+                <div class="result-actions">
+
+                    <button
+                        class="btn btn-primary"
+                        id="restartButton">
+
+                        Try Again
+
+                    </button>
+
+
+                    <a
+                        href="empowerment.html"
+                        class="btn btn-outline">
+
+                        Take Action
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         LEARNING CTA
+    ========================== -->
+    <section class="cta-section">
+
+        <div class="container">
+
+            <div class="cta-content">
+
+                <span class="eyebrow">
+                    KEEP LEARNING
+                </span>
+
+                <h2>
+                    Knowledge can<br>
+                    inspire change.
+                </h2>
+
+                <p>
+                    Explore HERPOWER to learn more about women's
+                    rights, opportunities, and inspiring stories.
+                </p>
+
+                <a
+                    href="inspiring-women.html"
+                    class="btn btn-light">
+
+                    Meet Inspiring Women
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <!-- FOOTER BRAND -->
+            <div>
+
+                <a
+                    href="../index.html"
+                    class="logo">
+
+                    HER<span>POWER</span>
+
+                </a>
+
+                <p>
+                    Empower Her. Inspire Change.
+                </p>
+
+            </div>
+
+
+            <!-- FOOTER LINKS -->
+            <div class="footer-links">
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="statistics.html">
+                    Statistics
+                </a>
+
+                <a href="laws.html">
+                    Laws & Rights
+                </a>
+
+                <a href="references.html">
+                    References
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER BOTTOM -->
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 HERPOWER.
+                Educational Advocacy Platform.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+    <script src="../js/main.js"></script>
+    <script src="../js/quiz.js"></script>
+
+</body>
+
+</html>

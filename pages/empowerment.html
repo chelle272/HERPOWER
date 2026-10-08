@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Take Action | HERPOWER</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <style>
+
+        /* =========================================
+           TAKE ACTION PAGE
+        ========================================= */
+
+        .action-hero {
+            padding: 95px 25px 90px;
+
+            background:
+                radial-gradient(
+                    circle at 85% 20%,
+                    rgba(255,255,255,0.65),
+                    transparent 35%
+                ),
+                radial-gradient(
+                    circle at 10% 85%,
+                    rgba(255,255,255,0.45),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #e9ddf5 0%,
+                    #f6eefb 50%,
+                    #f6dce9 100%
+                );
+        }
+
+        .action-hero .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .action-hero .section-label {
+            display: inline-block;
+            color: #d96c9d;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 18px;
+        }
+
+        .action-hero h1 {
+            max-width: 800px;
+
+            font-family: 'Playfair Display', serif;
+
+            color: #3f275c;
+
+            font-size: clamp(50px, 6vw, 78px);
+
+            line-height: 1.05;
+
+            margin-bottom: 25px;
+        }
+
+        .action-hero h1 span {
+            color: #d96c9d;
+        }
+
+        .action-hero p {
+            max-width: 680px;
+
+            color: #6f6875;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 16px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================================
+           ACTION INTRO
+        ========================================= */
+
+        .action-intro {
+            padding: 100px 25px;
+            background: #faf8fc;
+        }
+
+        .action-intro .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .action-intro .section-heading {
+            max-width: 800px;
+            margin-bottom: 50px;
+        }
+
+        .action-intro .section-label {
+            display: block;
+
+            color: #d96c9d;
+
+            font-size: 11px;
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 12px;
+        }
+
+        .action-intro .section-heading h2 {
+            font-family: 'Playfair Display', serif;
+
+            color: #3f275c;
+
+            font-size: clamp(42px, 5vw, 55px);
+
+            line-height: 1.1;
+
+            margin-bottom: 18px;
+        }
+
+        .action-intro .section-heading p {
+            color: #6f6875;
+
+            font-size: 15px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================================
+           ACTION CARDS
+        ========================================= */
+
+        .action-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .action-card {
+            background: #ffffff;
+
+            border: 1px solid #eee7f2;
+
+            border-radius: 20px;
+
+            padding: 32px;
+
+            box-shadow:
+                0 10px 30px rgba(63, 39, 92, 0.07);
+
+            transition: 0.3s ease;
+        }
+
+        .action-card:hover {
+            transform: translateY(-7px);
+
+            box-shadow:
+                0 18px 40px rgba(63, 39, 92, 0.13);
+        }
+
+        .action-card.completed {
+            border-color: #5b3a82;
+
+            background: #faf7fc;
+        }
+
+        .action-icon {
+            width: 55px;
+            height: 55px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 15px;
+
+            background: #e9ddf5;
+
+            color: #5b3a82;
+
+            font-size: 14px;
+            font-weight: 700;
+
+            margin-bottom: 23px;
+        }
+
+        .action-card h3 {
+            font-family: 'Playfair Display', serif;
+
+            color: #3f275c;
+
+            font-size: 27px;
+
+            line-height: 1.2;
+
+            margin-bottom: 12px;
+        }
+
+        .action-card p {
+            color: #6f6875;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 13px;
+
+            line-height: 1.75;
+
+            margin-bottom: 22px;
+
+            min-height: 68px;
+        }
+
+        .action-check {
+            border: 1px solid #d8cde2;
+
+            background: #ffffff;
+
+            color: #5b3a82;
+
+            padding: 10px 18px;
+
+            border-radius: 25px;
+
+            cursor: pointer;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            transition: 0.3s ease;
+        }
+
+        .action-check:hover,
+        .action-card.completed .action-check {
+            background: #5b3a82;
+
+            border-color: #5b3a82;
+
+            color: #ffffff;
+        }
+
+
+        /* =========================================
+           PROGRESS
+        ========================================= */
+
+        .action-progress-section {
+            padding: 85px 25px;
+
+            background: #f1eaf6;
+        }
+
+        .action-progress-section .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .progress-box {
+            max-width: 900px;
+
+            margin: auto;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 50px;
+        }
+
+        .progress-box .section-label {
+            display: block;
+
+            color: #d96c9d;
+
+            font-size: 11px;
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 12px;
+        }
+
+        .progress-box h2 {
+            font-family: 'Playfair Display', serif;
+
+            color: #3f275c;
+
+            font-size: 42px;
+
+            line-height: 1.1;
+
+            margin-bottom: 12px;
+        }
+
+        .progress-box p {
+            color: #6f6875;
+
+            font-size: 14px;
+        }
+
+        .progress-circle {
+            min-width: 155px;
+            width: 155px;
+            height: 155px;
+
+            border-radius: 50%;
+
+            background: #ffffff;
+
+            border: 10px solid #e9ddf5;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+            justify-content: center;
+
+            box-shadow:
+                0 10px 30px rgba(63, 39, 92, 0.08);
+        }
+
+        .progress-circle span {
+            color: #5b3a82;
+
+            font-size: 32px;
+
+            font-weight: 700;
+        }
+
+        .progress-circle small {
+            color: #88818c;
+
+            font-size: 11px;
+        }
+
+
+        /* =========================================
+           COMMITMENT
+        ========================================= */
+
+        .commitment-section {
+            padding: 100px 25px;
+
+            background: #faf8fc;
+        }
+
+        .commitment-section .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .commitment-box {
+            max-width: 800px;
+
+            margin: auto;
+
+            padding: 60px 45px;
+
+            text-align: center;
+
+            border-radius: 22px;
+
+            background: #ffffff;
+
+            border: 1px solid #eee7f2;
+
+            box-shadow:
+                0 12px 35px rgba(63, 39, 92, 0.06);
+        }
+
+        .commitment-box .section-label {
+            display: block;
+
+            color: #d96c9d;
+
+            font-size: 11px;
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 12px;
+        }
+
+        .commitment-box h2 {
+            font-family: 'Playfair Display', serif;
+
+            color: #3f275c;
+
+            font-size: 42px;
+
+            line-height: 1.1;
+
+            margin-bottom: 18px;
+        }
+
+        .commitment-box > p {
+            max-width: 650px;
+
+            margin: 0 auto 25px;
+
+            color: #6f6875;
+
+            font-size: 14px;
+
+            line-height: 1.8;
+        }
+
+        .commit-message {
+            color: #5b3a82 !important;
+
+            font-weight: 600;
+
+            margin-top: 18px !important;
+        }
+
+        .btn.committed {
+            background: #3f275c;
+        }
+
+
+        /* =========================================
+           FINAL CTA
+        ========================================= */
+
+        .action-cta {
+            padding: 105px 25px;
+
+            background: #3f275c;
+
+            color: #ffffff;
+
+            text-align: center;
+        }
+
+        .action-cta .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .action-cta-content {
+            max-width: 750px;
+
+            margin: auto;
+        }
+
+        .action-cta .section-label {
+            display: block;
+
+            color: #f6dce9;
+
+            font-size: 11px;
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 15px;
+        }
+
+        .action-cta h2 {
+            font-family: 'Playfair Display', serif;
+
+            color: #ffffff;
+
+            font-size: clamp(42px, 5vw, 58px);
+
+            line-height: 1.1;
+
+            margin-bottom: 20px;
+        }
+
+        .action-cta h2 span {
+            color: #f6dce9;
+        }
+
+        .action-cta p {
+            max-width: 620px;
+
+            margin: 0 auto 30px;
+
+            color: #ddd4e6;
+
+            font-size: 15px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================================
+           TAKE ACTION FOOTER FIX
+        ========================================= */
+
+        .action-page-footer {
+            background: #24172f;
+
+            color: white;
+
+            padding: 55px 25px 22px;
+        }
+
+        .action-page-footer-inner {
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: flex;
+
+            align-items: flex-start;
+
+            justify-content: space-between;
+
+            gap: 50px;
+        }
+
+        .action-page-footer-brand {
+            flex: 1;
+        }
+
+        .action-page-footer-brand .logo {
+            color: white;
+
+            font-family: 'Playfair Display', serif;
+
+            font-size: 27px;
+
+            font-weight: 700;
+
+            letter-spacing: 1px;
+        }
+
+        .action-page-footer-brand .logo span {
+            color: #d96c9d;
+        }
+
+        .action-page-footer-brand p {
+            color: #bdb2c6;
+
+            font-size: 13px;
+
+            margin-top: 10px;
+        }
+
+        .action-page-footer-links {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: flex-end;
+
+            gap: 30px;
+
+            flex-wrap: wrap;
+        }
+
+        .action-page-footer-links a {
+            color: #d9d0df;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 13px;
+
+            font-weight: 500;
+
+            transition: 0.3s ease;
+        }
+
+        .action-page-footer-links a:hover {
+            color: #f6dce9;
+        }
+
+        .action-page-footer-bottom {
+            max-width: 1200px;
+
+            margin: 40px auto 0;
+
+            padding-top: 20px;
+
+            border-top: 1px solid rgba(255,255,255,0.1);
+
+            text-align: center;
+        }
+
+        .action-page-footer-bottom p {
+            margin: 0;
+
+            color: #bdb2c6;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 13px;
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 1000px) {
+
+            .action-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .progress-box {
+                max-width: 800px;
+            }
+
+        }
+
+
+        @media (max-width: 768px) {
+
+            .action-hero {
+                padding: 75px 20px 70px;
+            }
+
+            .action-hero h1 {
+                font-size: 48px;
+            }
+
+            .action-intro {
+                padding: 75px 20px;
+            }
+
+            .action-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .action-card p {
+                min-height: auto;
+            }
+
+            .action-progress-section {
+                padding: 70px 20px;
+            }
+
+            .progress-box {
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 35px;
+            }
+
+            .progress-circle {
+                align-self: center;
+            }
+
+            .commitment-section {
+                padding: 75px 20px;
+            }
+
+            .commitment-box {
+                padding: 45px 25px;
+            }
+
+            .action-cta {
+                padding: 80px 20px;
+            }
+
+            .action-page-footer {
+                padding: 45px 20px 20px;
+            }
+
+            .action-page-footer-inner {
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 30px;
+            }
+
+            .action-page-footer-links {
+                justify-content: flex-start;
+
+                gap: 15px 25px;
+            }
+
+        }
+
+
+        @media (max-width: 480px) {
+
+            .action-hero h1 {
+                font-size: 40px;
+            }
+
+            .action-hero p {
+                font-size: 14px;
+            }
+
+            .action-intro .section-heading h2 {
+                font-size: 38px;
+            }
+
+            .action-card {
+                padding: 27px;
+            }
+
+            .progress-box h2 {
+                font-size: 34px;
+            }
+
+            .commitment-box h2 {
+                font-size: 34px;
+            }
+
+            .action-page-footer-links {
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 12px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="header">
+
+        <nav class="navbar">
+
+            <a
+                href="../index.html"
+                class="logo">
+
+                HER<span>POWER</span>
+
+            </a>
+
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu">
+
+                ☰
+
+            </button>
+
+
+            <ul
+                class="nav-links"
+                id="navLinks">
+
+                <li>
+                    <a href="../index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="statistics.html">
+                        Statistics
+                    </a>
+                </li>
+
+                <li>
+                    <a href="laws.html">
+                        Laws & Rights
+                    </a>
+                </li>
+
+                <li>
+                    <a href="inspiring-women.html">
+                        Inspiring Women
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="empowerment.html"
+                        class="active">
+
+                        Take Action
+
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="quiz.html"
+                        class="nav-button">
+
+                        Take the Quiz
+
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================================
+         HERO
+    ========================================== -->
+
+    <section class="action-hero">
+
+        <div class="container">
+
+            <span class="section-label">
+                TAKE ACTION
+            </span>
+
+            <h1>
+                Change begins<br>
+                <span>with what we do.</span>
+            </h1>
+
+            <p>
+                Women empowerment is not only about awareness.
+                It is also about creating opportunities, supporting
+                equality, and taking meaningful action.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         ACTION INTRO
+    ========================================== -->
+
+    <section class="action-intro">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    SMALL ACTIONS. REAL IMPACT.
+                </span>
+
+                <h2>
+                    How can you help?
+                </h2>
+
+                <p>
+                    Everyone can contribute to a more inclusive environment.
+                    Start with simple actions that promote respect,
+                    opportunity, and equality.
+                </p>
+
+            </div>
+
+
+            <!-- ACTION CARDS -->
+
+            <div class="action-grid">
+
+
+                <article class="action-card">
+
+                    <div class="action-icon">
+                        01
+                    </div>
+
+                    <h3>
+                        Educate
+                    </h3>
+
+                    <p>
+                        Learn about women's rights, gender equality,
+                        and the challenges women continue to face.
+                    </p>
+
+                    <button
+                        class="action-check"
+                        data-action="educate">
+
+                        Mark as Done
+
+                    </button>
+
+                </article>
+
+
+                <article class="action-card">
+
+                    <div class="action-icon">
+                        02
+                    </div>
+
+                    <h3>
+                        Speak Up
+                    </h3>
+
+                    <p>
+                        Challenge stereotypes and speak respectfully
+                        when you see discrimination or unfair treatment.
+                    </p>
+
+                    <button
+                        class="action-check"
+                        data-action="speak">
+
+                        Mark as Done
+
+                    </button>
+
+                </article>
+
+
+                <article class="action-card">
+
+                    <div class="action-icon">
+                        03
+                    </div>
+
+                    <h3>
+                        Support
+                    </h3>
+
+                    <p>
+                        Support women-owned businesses, organizations,
+                        students, workers, and community initiatives.
+                    </p>
+
+                    <button
+                        class="action-check"
+                        data-action="support">
+
+                        Mark as Done
+
+                    </button>
+
+                </article>
+
+
+                <article class="action-card">
+
+                    <div class="action-icon">
+                        04
+                    </div>
+
+                    <h3>
+                        Encourage
+                    </h3>
+
+                    <p>
+                        Encourage girls and women to pursue education,
+                        careers, leadership, and opportunities.
+                    </p>
+
+                    <button
+                        class="action-check"
+                        data-action="encourage">
+
+                        Mark as Done
+
+                    </button>
+
+                </article>
+
+
+                <article class="action-card">
+
+                    <div class="action-icon">
+                        05
+                    </div>
+
+                    <h3>
+                        Respect
+                    </h3>
+
+                    <p>
+                        Practice respect and create spaces where everyone
+                        can feel safe, heard, and valued.
+                    </p>
+
+                    <button
+                        class="action-check"
+                        data-action="respect">
+
+                        Mark as Done
+
+                    </button>
+
+                </article>
+
+
+                <article class="action-card">
+
+                    <div class="action-icon">
+                        06
+                    </div>
+
+                    <h3>
+                        Participate
+                    </h3>
+
+                    <p>
+                        Take part in activities and conversations that
+                        promote equality and positive social change.
+                    </p>
+
+                    <button
+                        class="action-check"
+                        data-action="participate">
+
+                        Mark as Done
+
+                    </button>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         PROGRESS
+    ========================================== -->
+
+    <section class="action-progress-section">
+
+        <div class="container">
+
+            <div class="progress-box">
+
+                <div>
+
+                    <span class="section-label">
+                        YOUR PROGRESS
+                    </span>
+
+                    <h2>
+                        Every action counts.
+                    </h2>
+
+                    <p>
+                        Complete the actions above and see your progress.
+                    </p>
+
+                </div>
+
+
+                <div class="progress-circle">
+
+                    <span id="progressNumber">
+                        0%
+                    </span>
+
+                    <small>
+                        completed
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         COMMITMENT
+    ========================================== -->
+
+    <section class="commitment-section">
+
+        <div class="container">
+
+            <div class="commitment-box">
+
+                <span class="section-label">
+                    MAKE A COMMITMENT
+                </span>
+
+                <h2>
+                    I choose to support equality.
+                </h2>
+
+                <p>
+                    Empowerment begins with individual choices.
+                    Make a simple commitment to promote respect,
+                    fairness, and equal opportunity.
+                </p>
+
+                <button
+                    class="btn btn-primary"
+                    id="commitButton">
+
+                    I Commit
+
+                </button>
+
+                <p
+                    class="commit-message"
+                    id="commitMessage">
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         FINAL CTA
+    ========================================== -->
+
+    <section class="action-cta">
+
+        <div class="container">
+
+            <div class="action-cta-content">
+
+                <span class="section-label">
+                    KEEP LEARNING
+                </span>
+
+                <h2>
+                    Know your rights.<br>
+                    Know your <span>power.</span>
+                </h2>
+
+                <p>
+                    Explore our quiz and test what you have learned
+                    about women empowerment and equal opportunities.
+                </p>
+
+                <a
+                    href="quiz.html"
+                    class="btn btn-light">
+
+                    Take the Quiz
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="action-page-footer">
+
+        <div class="action-page-footer-inner">
+
+            <!-- BRAND -->
+
+            <div class="action-page-footer-brand">
+
+                <a
+                    href="../index.html"
+                    class="logo">
+
+                    HER<span>POWER</span>
+
+                </a>
+
+                <p>
+                    Empower Her. Inspire Change.
+                </p>
+
+            </div>
+
+
+            <!-- LINKS -->
+
+            <div class="action-page-footer-links">
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="statistics.html">
+                    Statistics
+                </a>
+
+                <a href="laws.html">
+                    Laws & Rights
+                </a>
+
+                <a href="references.html">
+                    References
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- COPYRIGHT -->
+
+        <div class="action-page-footer-bottom">
+
+            <p>
+                © 2026 HERPOWER. Educational Advocacy Platform.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="../js/main.js"></script>
+
+    <script src="../js/empowerment.js"></script>
+
+
+</body>
+
+</html>

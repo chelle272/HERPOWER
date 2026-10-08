@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Inspiring Women | HERPOWER</title>
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <style>
+        /* =========================================
+           INSPIRING WOMEN PAGE
+           Page-specific styling
+        ========================================= */
+
+        .women-hero {
+            padding: 95px 25px 90px;
+            background:
+                radial-gradient(
+                    circle at 85% 20%,
+                    rgba(255,255,255,0.65),
+                    transparent 35%
+                ),
+                radial-gradient(
+                    circle at 10% 85%,
+                    rgba(255,255,255,0.45),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #e9ddf5 0%,
+                    #f6eefb 50%,
+                    #f6dce9 100%
+                );
+        }
+
+        .women-hero-container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .women-hero-text {
+            max-width: 850px;
+        }
+
+        .women-hero-text .section-label {
+            display: inline-block;
+            color: #d96c9d;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 18px;
+        }
+
+        .women-hero-text h1 {
+            font-family: 'Playfair Display', serif;
+            color: #3f275c;
+            font-size: clamp(50px, 6vw, 78px);
+            line-height: 1.05;
+            margin-bottom: 25px;
+        }
+
+        .women-hero-text h1 span {
+            color: #d96c9d;
+        }
+
+        .women-hero-text p {
+            max-width: 680px;
+            color: #6f6875;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+
+        /* =========================================
+           ROLE MODELS SECTION
+        ========================================= */
+
+        .woman-intro {
+            background: #faf8fc;
+            padding: 100px 25px;
+        }
+
+        .woman-intro .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .woman-intro .section-heading {
+            max-width: 850px;
+            margin-bottom: 35px;
+        }
+
+        .woman-intro .eyebrow {
+            display: block;
+            color: #d96c9d;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .woman-intro .section-heading h2 {
+            font-family: 'Playfair Display', serif;
+            color: #3f275c;
+            font-size: clamp(42px, 5vw, 58px);
+            line-height: 1.08;
+            margin-bottom: 18px;
+        }
+
+        .woman-intro .section-heading p {
+            max-width: 850px;
+            color: #6f6875;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+
+        /* =========================================
+           FILTER BUTTONS
+        ========================================= */
+
+        .woman-filters {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 35px 0 45px;
+        }
+
+        .filter-btn {
+            border: 1px solid #d8cde2;
+            background: #ffffff;
+            color: #3f275c;
+            padding: 11px 21px;
+            border-radius: 30px;
+            cursor: pointer;
+
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+
+            transition: 0.3s ease;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #5b3a82;
+            border-color: #5b3a82;
+            color: #ffffff;
+        }
+
+
+        /* =========================================
+           WOMEN GRID
+        ========================================= */
+
+        .women-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+
+        /* =========================================
+           WOMAN CARD
+        ========================================= */
+
+        .woman-card {
+            background: #ffffff;
+            border: 1px solid #eee7f2;
+            border-radius: 20px;
+            overflow: hidden;
+
+            box-shadow:
+                0 10px 30px rgba(63, 39, 92, 0.07);
+
+            transition: 0.3s ease;
+        }
+
+        .woman-card:hover {
+            transform: translateY(-7px);
+
+            box-shadow:
+                0 18px 40px rgba(63, 39, 92, 0.13);
+        }
+
+
+        /* =========================================
+           IMAGE
+           
+           IMPORTANT:
+           Same size for ALL women
+        ========================================= */
+
+        .modern-woman-image {
+            width: 100%;
+            height: 245px;
+
+            overflow: hidden;
+
+            display: block;
+
+            position: relative;
+
+            background: #e9ddf5;
+        }
+
+        .modern-woman-image img {
+            width: 100%;
+            height: 100%;
+
+            display: block;
+
+            object-fit: cover;
+            object-position: center;
+
+            transition: transform 0.4s ease;
+        }
+
+        .woman-card:hover .modern-woman-image img {
+            transform: scale(1.04);
+        }
+
+
+        /* Slightly different image positioning
+           so faces remain nicely framed */
+
+        .woman-bg-one img {
+            object-position: center 30%;
+        }
+
+        .woman-bg-two img {
+            object-position: center 30%;
+        }
+
+        .woman-bg-three img {
+            object-position: center 30%;
+        }
+
+        .woman-bg-four img {
+            object-position: center 30%;
+        }
+
+        .woman-bg-five img {
+            object-position: center 30%;
+        }
+
+        .woman-bg-six img {
+            object-position: center 30%;
+        }
+
+
+        /* =========================================
+           CARD CONTENT
+        ========================================= */
+
+        .woman-content {
+            padding: 26px 27px 28px;
+        }
+
+        .woman-category {
+            display: inline-block;
+
+            color: #d96c9d;
+
+            font-size: 10px;
+            font-weight: 700;
+
+            letter-spacing: 1.5px;
+
+            margin-bottom: 8px;
+        }
+
+        .woman-content h3 {
+            font-family: 'Playfair Display', serif;
+
+            color: #3f275c;
+
+            font-size: 25px;
+            line-height: 1.2;
+
+            margin-bottom: 12px;
+        }
+
+        .woman-content p {
+            color: #6f6875;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 13px;
+            line-height: 1.7;
+
+            margin-bottom: 20px;
+
+            min-height: 66px;
+        }
+
+        .story-button {
+            border: none;
+            background: transparent;
+
+            padding: 0;
+
+            color: #5b3a82;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition: 0.3s ease;
+        }
+
+        .story-button:hover {
+            color: #d96c9d;
+            transform: translateX(4px);
+        }
+
+
+        /* =========================================
+           INSPIRATION MESSAGE
+        ========================================= */
+
+        .inspiration-section {
+            padding: 90px 25px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f1e7f7,
+                    #f8eef6
+                );
+        }
+
+        .inspiration-section .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .inspiration-box {
+            max-width: 800px;
+            margin: auto;
+
+            text-align: center;
+        }
+
+        .inspiration-box .eyebrow {
+            color: #d96c9d;
+
+            font-size: 11px;
+            font-weight: 700;
+
+            letter-spacing: 2px;
+        }
+
+        .inspiration-box h2 {
+            font-family: 'Playfair Display', serif;
+
+            color: #3f275c;
+
+            font-size: clamp(38px, 5vw, 52px);
+
+            line-height: 1.1;
+
+            margin: 15px 0 20px;
+        }
+
+        .inspiration-box p {
+            max-width: 680px;
+
+            margin: 0 auto 28px;
+
+            color: #6f6875;
+
+            font-size: 15px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================================
+           STORY MODAL
+        ========================================= */
+
+        .story-modal {
+            position: fixed;
+
+            inset: 0;
+
+            z-index: 9999;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 25px;
+
+            background: rgba(36, 23, 47, 0.70);
+
+            backdrop-filter: blur(5px);
+
+            opacity: 0;
+            visibility: hidden;
+
+            transition: 0.3s ease;
+        }
+
+        .story-modal.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .story-modal-content {
+            position: relative;
+
+            width: 100%;
+            max-width: 650px;
+
+            max-height: 90vh;
+
+            overflow-y: auto;
+
+            padding: 45px;
+
+            background: #ffffff;
+
+            border-radius: 22px;
+
+            box-shadow:
+                0 25px 80px rgba(0,0,0,0.25);
+
+            transform: translateY(20px);
+
+            transition: 0.3s ease;
+        }
+
+        .story-modal.show .story-modal-content {
+            transform: translateY(0);
+        }
+
+        .story-close {
+            position: absolute;
+
+            top: 18px;
+            right: 20px;
+
+            width: 38px;
+            height: 38px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background: #f3edf6;
+
+            color: #5b3a82;
+
+            font-size: 24px;
+
+            cursor: pointer;
+
+            transition: 0.3s ease;
+        }
+
+        .story-close:hover {
+            background: #5b3a82;
+            color: #ffffff;
+        }
+
+        .story-badge {
+            color: #d96c9d;
+
+            font-size: 11px;
+            font-weight: 700;
+
+            letter-spacing: 1.5px;
+        }
+
+        .story-modal-content h2 {
+            font-family: 'Playfair Display', serif;
+
+            color: #3f275c;
+
+            font-size: 38px;
+
+            line-height: 1.15;
+
+            margin: 12px 0 18px;
+        }
+
+        .story-modal-content > p {
+            color: #6f6875;
+
+            font-size: 14px;
+
+            line-height: 1.8;
+        }
+
+        .story-highlight {
+            margin: 28px 0;
+
+            padding: 22px;
+
+            background: #f6f1f9;
+
+            border-left: 4px solid #d96c9d;
+
+            border-radius: 8px;
+        }
+
+        .story-highlight strong {
+            color: #5b3a82;
+
+            font-size: 11px;
+
+            letter-spacing: 1px;
+        }
+
+        .story-highlight p {
+            margin-top: 8px;
+
+            color: #4d4653;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+        .story-source {
+            margin-top: 20px;
+
+            color: #88818c !important;
+
+            font-size: 11px !important;
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 1000px) {
+
+            .women-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 768px) {
+
+            .women-hero {
+                padding: 75px 20px 70px;
+            }
+
+            .women-hero-text h1 {
+                font-size: 3.2rem;
+            }
+
+            .woman-intro {
+                padding: 75px 20px;
+            }
+
+            .woman-intro .section-heading h2 {
+                font-size: 2.7rem;
+            }
+
+            .women-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .woman-filters {
+                justify-content: flex-start;
+            }
+
+            .modern-woman-image {
+                height: 260px;
+            }
+
+            .inspiration-section {
+                padding: 70px 20px;
+            }
+
+            .story-modal-content {
+                padding: 35px 25px;
+            }
+
+            .story-modal-content h2 {
+                font-size: 30px;
+            }
+
+        }
+
+
+        @media (max-width: 480px) {
+
+            .women-hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .women-hero-text p {
+                font-size: 14px;
+            }
+
+            .woman-intro .section-heading h2 {
+                font-size: 2.2rem;
+            }
+
+            .filter-btn {
+                padding: 9px 15px;
+                font-size: 12px;
+            }
+
+            .modern-woman-image {
+                height: 240px;
+            }
+
+            .woman-content {
+                padding: 23px;
+            }
+
+            .woman-content h3 {
+                font-size: 23px;
+            }
+
+            .inspiration-box h2 {
+                font-size: 2.2rem;
+            }
+
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <!-- =========================================
+         NAVIGATION
+    ========================================== -->
+
+    <header class="header">
+
+        <nav class="navbar">
+
+            <a href="../index.html" class="logo">
+                HER<span>POWER</span>
+            </a>
+
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu">
+
+                ☰
+
+            </button>
+
+
+            <ul
+                class="nav-links"
+                id="navLinks">
+
+                <li>
+                    <a href="../index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="statistics.html">
+                        Statistics
+                    </a>
+                </li>
+
+                <li>
+                    <a href="laws.html">
+                        Laws & Rights
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="inspiring-women.html"
+                        class="active">
+
+                        Inspiring Women
+
+                    </a>
+                </li>
+
+                <li>
+                    <a href="empowerment.html">
+                        Take Action
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="quiz.html"
+                        class="nav-button">
+
+                        Take the Quiz
+
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================================
+         HERO
+    ========================================== -->
+
+    <section class="women-hero">
+
+        <div class="women-hero-container">
+
+            <div class="women-hero-text">
+
+                <span class="section-label">
+                    WOMEN WHO INSPIRE
+                </span>
+
+                <h1>
+                    Stories of women<br>
+                    <span>who made an impact.</span>
+                </h1>
+
+                <p>
+                    Their achievements remind us that when women are given
+                    opportunities, they can create meaningful change in their
+                    communities and beyond.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         ROLE MODELS
+    ========================================== -->
+
+    <section class="woman-intro">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="eyebrow">
+                    ROLE MODELS
+                </span>
+
+                <h2>
+                    Different paths.<br>
+                    One powerful message.
+                </h2>
+
+                <p>
+                    Filipino women have made significant contributions in
+                    medicine, journalism, sports, science, technology,
+                    leadership, and other fields.
+                </p>
+
+            </div>
+
+
+            <!-- FILTERS -->
+
+            <div class="woman-filters">
+
+                <button
+                    class="filter-btn active"
+                    data-filter="all">
+
+                    All
+
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="science">
+
+                    Science & Innovation
+
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="leadership">
+
+                    Leadership
+
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="media">
+
+                    Media
+
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="sports">
+
+                    Sports
+
+                </button>
+
+            </div>
+
+
+            <!-- =================================
+                 WOMEN CARDS
+            ================================== -->
+
+            <div class="women-grid">
+
+
+                <!-- FE DEL MUNDO -->
+
+                <article
+                    class="woman-card"
+                    data-category="science">
+
+                    <div class="modern-woman-image woman-bg-one">
+
+                        <img
+                            src="../images/women/Del_Mundo.webp"
+                            alt="Dr. Fe del Mundo">
+
+                    </div>
+
+                    <div class="woman-content">
+
+                        <span class="woman-category">
+                            SCIENCE & MEDICINE
+                        </span>
+
+                        <h3>
+                            Dr. Fe del Mundo
+                        </h3>
+
+                        <p>
+                            A pioneering Filipino pediatrician whose work
+                            helped shape children's healthcare in the
+                            Philippines.
+                        </p>
+
+                        <button
+                            class="story-button"
+                            data-woman="fe">
+
+                            Read Story →
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MARIA RESSA -->
+
+                <article
+                    class="woman-card"
+                    data-category="media">
+
+                    <div class="modern-woman-image woman-bg-two">
+
+                        <img
+                            src="../images/women/MariaRessa.webp"
+                            alt="Maria Ressa">
+
+                    </div>
+
+                    <div class="woman-content">
+
+                        <span class="woman-category">
+                            MEDIA & JOURNALISM
+                        </span>
+
+                        <h3>
+                            Maria Ressa
+                        </h3>
+
+                        <p>
+                            A Filipino journalist and co-founder of Rappler
+                            recognized internationally for defending freedom
+                            of expression.
+                        </p>
+
+                        <button
+                            class="story-button"
+                            data-woman="maria">
+
+                            Read Story →
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- HIDILYN DIAZ -->
+
+                <article
+                    class="woman-card"
+                    data-category="sports">
+
+                    <div class="modern-woman-image woman-bg-three">
+
+                        <img
+                            src="../images/women/Diaz.webp"
+                            alt="Hidilyn Diaz">
+
+                    </div>
+
+                    <div class="woman-content">
+
+                        <span class="woman-category">
+                            SPORTS
+                        </span>
+
+                        <h3>
+                            Hidilyn Diaz
+                        </h3>
+
+                        <p>
+                            A Filipino weightlifter who became the country's
+                            first Olympic gold medalist.
+                        </p>
+
+                        <button
+                            class="story-button"
+                            data-woman="hidilyn">
+
+                            Read Story →
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- AISA MIJENO -->
+
+                <article
+                    class="woman-card"
+                    data-category="science">
+
+                    <div class="modern-woman-image woman-bg-four">
+
+                        <img
+                            src="../images/women/Aisa.jpg"
+                            alt="Aisa Mijeno">
+
+                    </div>
+
+                    <div class="woman-content">
+
+                        <span class="woman-category">
+                            SCIENCE & INNOVATION
+                        </span>
+
+                        <h3>
+                            Aisa Mijeno
+                        </h3>
+
+                        <p>
+                            An engineer and social entrepreneur known for
+                            developing sustainable lighting solutions.
+                        </p>
+
+                        <button
+                            class="story-button"
+                            data-woman="aisa">
+
+                            Read Story →
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CORAZON AQUINO -->
+
+                <article
+                    class="woman-card"
+                    data-category="leadership">
+
+                    <div class="modern-woman-image woman-bg-five">
+
+                        <img
+                            src="../images/women/Corazon.jpg"
+                            alt="Corazon Aquino">
+
+                    </div>
+
+                    <div class="woman-content">
+
+                        <span class="woman-category">
+                            LEADERSHIP
+                        </span>
+
+                        <h3>
+                            Corazon Aquino
+                        </h3>
+
+                        <p>
+                            The first woman president of the Philippines,
+                            whose leadership became an important part of
+                            Philippine democratic history.
+                        </p>
+
+                        <button
+                            class="story-button"
+                            data-woman="corazon">
+
+                            Read Story →
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- LEA SALONGA -->
+
+                <article
+                    class="woman-card"
+                    data-category="media">
+
+                    <div class="modern-woman-image woman-bg-six">
+
+                        <img
+                            src="../images/women/lea-salonga.jpg"
+                            alt="Lea Salonga">
+
+                    </div>
+
+                    <div class="woman-content">
+
+                        <span class="woman-category">
+                            ARTS & PERFORMANCE
+                        </span>
+
+                        <h3>
+                            Lea Salonga
+                        </h3>
+
+                        <p>
+                            An internationally recognized Filipino performer
+                            who has represented Filipino talent on Broadway
+                            and beyond.
+                        </p>
+
+                        <button
+                            class="story-button"
+                            data-woman="lea">
+
+                            Read Story →
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         INSPIRATION MESSAGE
+    ========================================== -->
+
+    <section class="inspiration-section">
+
+        <div class="container">
+
+            <div class="inspiration-box">
+
+                <span class="eyebrow">
+                    THE HERPOWER MESSAGE
+                </span>
+
+                <h2>
+                    Your background does not<br>
+                    define your potential.
+                </h2>
+
+                <p>
+                    Empowerment means creating opportunities for women
+                    to learn, lead, innovate, participate, and make
+                    decisions about their own lives.
+                </p>
+
+                <a
+                    href="empowerment.html"
+                    class="btn btn-primary">
+
+                    Discover How to Take Action
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         CTA
+    ========================================== -->
+
+    <section class="cta-section">
+
+        <div class="container">
+
+            <div class="cta-content">
+
+                <span class="section-label">
+                    BE PART OF THE CHANGE
+                </span>
+
+                <h2>
+                    Empowerment starts<br>
+                    with <span>opportunity.</span>
+                </h2>
+
+                <p>
+                    Learn how you can help create a more equal environment
+                    where every woman has the opportunity to succeed.
+                </p>
+
+                <a
+                    href="empowerment.html"
+                    class="btn btn-light">
+
+                    Take Action
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         STORY MODAL
+    ========================================== -->
+
+    <div
+        class="story-modal"
+        id="storyModal">
+
+        <div class="story-modal-content">
+
+            <button
+                class="story-close"
+                id="storyClose"
+                aria-label="Close story">
+
+                &times;
+
+            </button>
+
+            <span
+                class="story-badge"
+                id="storyBadge">
+
+                WOMEN WHO INSPIRE
+
+            </span>
+
+            <h2 id="storyTitle">
+                Woman Name
+            </h2>
+
+            <p id="storyDescription">
+                Story description.
+            </p>
+
+            <div class="story-highlight">
+
+                <strong>
+                    HERPOWER LESSON
+                </strong>
+
+                <p id="storyLesson">
+                    Lesson from her story.
+                </p>
+
+            </div>
+
+            <p
+                class="story-source"
+                id="storySource">
+
+                Source:
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div>
+
+                <a
+                    href="../index.html"
+                    class="logo">
+
+                    HER<span>POWER</span>
+
+                </a>
+
+                <p>
+                    Empower Her. Inspire Change.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="statistics.html">
+                    Statistics
+                </a>
+
+                <a href="laws.html">
+                    Laws & Rights
+                </a>
+
+                <a href="references.html">
+                    References
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 HERPOWER.
+                Educational Advocacy Platform.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="../js/main.js"></script>
+    <script src="../js/inspiring-women.js"></script>
+
+</body>
+</html>
